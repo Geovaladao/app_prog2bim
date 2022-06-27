@@ -25,7 +25,11 @@ export default function App() {
   function executarOperacao() {
     if (operacao == '+') {
       setDadosVisor(valor1 + Number(dadosVisor));
-    }
+    } else if (operacao == '-') {
+        setDadosVisor(valor1 - Number(dadosVisor));
+      }  if (operacao == 'X') {
+        setDadosVisor(valor1 * Number(dadosVisor));
+      } 
   }
 
   return (
@@ -94,11 +98,31 @@ export default function App() {
           onPress={() => addNumeroAoVisor('3')}>
           <Text style={styles.texto_botao}>3</Text>
         </TouchableOpacity>
+        
+        <TouchableOpacity style={styles.botao_num}
+         onPress={() => configOperacao('X')}> <Text style={styles.texto_botao}>X</Text> 
+         </TouchableOpacity>
+        
+      </View>
+
+      <View style={styles.view_linha}>
+        <TouchableOpacity style={styles.botao_num}
+          onPress={() => addNumeroAoVisor('0')}>
+          <Text style={styles.texto_botao}>0</Text>
+        </TouchableOpacity>
+
+
+        <TouchableOpacity style={styles.botao_num}
+          onPress={() => configOperacao('-')}>
+          <Text style={styles.texto_botao}>-</Text>
+        </TouchableOpacity>
 
         <TouchableOpacity style={styles.botao_num}
           onPress={() => executarOperacao()}>
           <Text style={styles.texto_botao}>=</Text>
         </TouchableOpacity>
+
+        
       </View>
 
       <StatusBar style="auto" />
@@ -109,7 +133,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f78',
+    backgroundColor: '#87CEFA',
     alignItems: 'center',
     justifyContent: 'center',
   },
