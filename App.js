@@ -29,6 +29,8 @@ export default function App() {
         setDadosVisor(valor1 - Number(dadosVisor));
       }  if (operacao == 'X') {
         setDadosVisor(valor1 * Number(dadosVisor));
+      }  else if (operacao == '%') {
+        setDadosVisor(valor1 / Number(dadosVisor));
       } 
   }
 
@@ -116,6 +118,11 @@ export default function App() {
           onPress={() => configOperacao('-')}>
           <Text style={styles.texto_botao}>-</Text>
         </TouchableOpacity>
+
+        <TouchableOpacity style={styles.botao_num}
+         onPress={() => configOperacao('%')}> 
+         <Text style={styles.texto_botao}>%</Text> 
+         </TouchableOpacity>
 
         <TouchableOpacity style={styles.botao_num}
           onPress={() => executarOperacao()}>
