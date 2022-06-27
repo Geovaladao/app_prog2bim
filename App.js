@@ -3,7 +3,7 @@ import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-nativ
 import { useState } from 'react';
 
 export default function App() {
-
+ 
   const [dadosVisor, setDadosVisor] = useState('');
   const [operacao, setOperacao] = useState('');
   const [valor1, setValor1] = useState(0);
@@ -37,6 +37,8 @@ export default function App() {
   return (
     <View style={styles.container}>
       
+      <Text>Calculadora Apple</Text>
+
       <TextInput style={styles.estilo_visor}
        editable={false}
        value={dadosVisor}></TextInput>
@@ -139,34 +141,36 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#87CEFA',
+    flex: 4,
+    backgroundColor: '#87CEEB',
     alignItems: 'center',
     justifyContent: 'center',
   },
 
   estilo_visor: {
-    borderWidth: 1,
+    borderWidth: 2,
     width: '95%',
-    height: '15%',
-    fontSize: 30,
-    borderRadius: 10,
+    height: '20%',
+    fontSize: 25,
+    borderRadius: 20,
+    backgroundColor: '#FFF5EE',
   },
 
   view_linha: {
-    // borderWidth: 1,
+    // borderWidth: 2,
     width: '95%',
     height: '15%',
     flexDirection: 'row',
   },
 
   botao_num: {
-    borderWidth: 1,
+    borderWidth: 2,
     width: '25%',
     height: '100%',
     alignItems: 'center',
     justifyContent: 'center',
-    borderRadius: 10,
+    borderRadius: 100,
+    backgroundColor: '#FF8C00',
   },
 
   texto_botao: {
