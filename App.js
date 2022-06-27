@@ -5,6 +5,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text>Olá Mundo </Text>
+      <Text>Geovana Linda </Text>
       <StatusBar style="auto" />
     </View>
   );
@@ -13,7 +14,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#857',
     alignItems: 'center',
     justifyContent: 'center',
   },
