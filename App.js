@@ -29,7 +29,7 @@ export default function App() {
         setDadosVisor(valor1 - Number(dadosVisor));
       }  if (operacao == 'X') {
         setDadosVisor(valor1 * Number(dadosVisor));
-      }  else if (operacao == '%') {
+      }  else if (operacao == '÷') {
         setDadosVisor(valor1 / Number(dadosVisor));
       } 
   }
@@ -37,7 +37,8 @@ export default function App() {
   return (
     <View style={styles.container}>
       
-      <Text>Calculadora Apple</Text>
+      <Text style={styles.texto}>Calculadora Apple</Text>
+
 
       <TextInput style={styles.estilo_visor}
        editable={false}
@@ -122,8 +123,8 @@ export default function App() {
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.botao_num}
-         onPress={() => configOperacao('%')}> 
-         <Text style={styles.texto_botao}>%</Text> 
+         onPress={() => configOperacao('÷')}> 
+         <Text style={styles.texto_botao}>÷</Text> 
          </TouchableOpacity>
 
         <TouchableOpacity style={styles.botao_num}
@@ -175,5 +176,9 @@ const styles = StyleSheet.create({
 
   texto_botao: {
     fontSize: 25,
+  },
+  texto:{
+    color: 'white',
+    marginBottom: 50,
   },
 });
